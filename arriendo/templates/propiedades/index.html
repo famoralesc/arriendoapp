@@ -3,10 +3,36 @@
 {% block title %}Propiedades{% endblock %}
 
 {% block content %}
-<h1>Lista de Clientes</h1>
-<ul>
-    {% for cliente in clientes %}
-    <li>{{ cliente.nombre }} {{ cliente.apellido }}</li>
-    {% endfor %}
-</ul>
+<h1 class="mt-4">Gestión de propiedades</h1>
+
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Propiedades
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Rol</th>
+                    <th>Dirección</th>
+                    <th>Dueño</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for propiedad in propiedades %}
+                <tr>
+                    <td>{{ propiedad.id }}</td> 
+                    <td>{{ propiedad.rol }}</td>
+                    <td>{{ propiedad.direccion }}</td> 
+                    <td>{{ propiedad.dueno }}</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

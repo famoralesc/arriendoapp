@@ -20,5 +20,5 @@ class ComprobanteAdmin(admin.ModelAdmin):
 
 @admin.register(models.Propiedad)
 class PropiedadAdmin(admin.ModelAdmin):
-    list_select_related = ["operacion", "cliente"]
+    pass
 
